@@ -23,25 +23,25 @@ def index():
 
     personalEmails = []
     for email in person["personalEmails"]:
-        personalEmails.append(email)
+        personalEmails.append(PersonalEmail(email=email))
 
     p.personalEmails = personalEmails
 
     workEmails = []
     for email in person["workEmails"]:
-        workEmails.append(email)
+        workEmails.append(WorkEmail(email=email))
 
     p.workEmails = workEmails
 
     webAddresses = []
     for url in person["webAddresses"]:
-        webAddresses.append(url)
+        webAddresses.append(WebAddress(url=url))
 
     p.webAddresses = webAddresses
 
     workWebAddresses = []
     for url in person["workWebAddresses"]:
-        workWebAddresses.append(url)
+        workWebAddresses.append(WorkWebAddress(url=url))
 
     p.workWebAddresses = workWebAddresses
 
