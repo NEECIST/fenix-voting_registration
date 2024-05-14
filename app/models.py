@@ -29,6 +29,10 @@ class Role(db.Model):
     type = db.Column(db.String)
     registrations = relationship("Registration")
 
+    def __str__(self):
+        string = f"{self.type}\n"
+        return string
+
 class Photo(db.Model):
     __tablename__ = "photos"
     id = db.Column(db.Integer, primary_key=True)
@@ -90,3 +94,10 @@ class Person(db.Model):
     workEmails = relationship("WorkEmail")
     webAddresses = relationship("WebAddress")
     workWebAddresses = relationship("WorkWebAddress")
+
+    def __str__(self):
+        string = f"password,{self.username},{self.email},{self.name}\n"
+        return string
+    
+    def __repr__(self):
+        return self.__str__()
