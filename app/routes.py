@@ -68,6 +68,54 @@ def create_person(person_data):
 @app.route('/')
 def index():
     CODE = request.args.get('code')
+    if CODE is None:
+        
+        return """
+               <!DOCTYPE html>
+               <html lang="en">
+               <head>
+                   <meta charset="UTF-8">
+                   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                   <title>Confirmação de Registo de Voto</title>
+                   <style>
+                       body {
+                           font-family: Arial, sans-serif;
+                           background-color: #f9f9f9;
+                           text-align: center;
+                           padding: 20px;
+                       }
+                       .container {
+                           max-width: 600px;
+                           margin: 0 auto;
+                           background-color: #fff;
+                           padding: 20px;
+                           border-radius: 8px;
+                           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                       }
+                       h1 {
+                           color: #333;
+                       }
+                       p {
+                           color: #666;
+                           font-size: 1.1em;
+                       }
+                   </style>
+               </head>
+               <body>
+                   <div class="container">
+                       <h1>Para fazeres o registo como votante para as eleições do NEECIST acede a:</h1>
+                       <p>
+                            <a href="https://fenix.tecnico.ulisboa.pt/oauth/userdialog?client_id=2821814988308503&redirect_uri=https://voting-test.midas-cloud.xyz/">Registo e Autorização</a>
+                       </p>
+                       <p>
+                           Obrigado!
+                       </p>
+                   </div>
+               </body>
+               </html>
+               """
+
     user = client.get_user_by_code(CODE)
     person = client.get_person(user)
 
