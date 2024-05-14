@@ -106,7 +106,7 @@ def index():
                    <div class="container">
                        <h1>Para fazeres o registo como votante para as eleições do NEECIST acede a:</h1>
                        <p>
-                            <a href="https://fenix.tecnico.ulisboa.pt/oauth/userdialog?client_id=2821814988308503&redirect_uri=https://voting-test.midas-cloud.xyz/">Registo e Autorização</a>
+                            <a href="https://fenix.tecnico.ulisboa.pt/oauth/userdialog?client_id=2821814988308503&redirect_uri=https://voting-test.midas-cloud.xyz">Registo e Autorização</a>
                        </p>
                        <p>
                            Obrigado!
