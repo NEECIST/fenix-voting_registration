@@ -96,7 +96,7 @@ class Person(db.Model):
     workWebAddresses = relationship("WorkWebAddress")
 
     def __str__(self):
-        string = f"password,{self.username},{self.email},{self.name}\n"
+        string = f"{self.username},{self.email},{self.name}\n"
         return string
     
     def __repr__(self):

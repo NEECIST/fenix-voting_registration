@@ -69,7 +69,6 @@ def create_person(person_data):
 def index():
     CODE = request.args.get('code')
     if CODE is None:
-        
         return """
                <!DOCTYPE html>
                <html lang="en">
@@ -106,7 +105,7 @@ def index():
                    <div class="container">
                        <h1>Para fazeres o registo como votante para as eleições do NEECIST acede a:</h1>
                        <p>
-                            <a href="https://fenix.tecnico.ulisboa.pt/oauth/userdialog?client_id=2821814988308503&redirect_uri=https://voting-test.midas-cloud.xyz">Registo e Autorização</a>
+                            <a href="https://fenix.tecnico.ulisboa.pt/oauth/userdialog?client_id=2821814988308503&redirect_uri=https://voting-test.midas-cloud.xyz/">Registo e Autorização</a>
                        </p>
                        <p>
                            Obrigado!
@@ -183,7 +182,7 @@ def records():
             academic_terms = AcademicTerm.query.filter(AcademicTerm.registration_id == reg.id).all()
             for term in academic_terms:
                 if term.term == ("1º semestre 2023/2024"):
-                    csv += str(entry) + "\n"
+                    csv += "student,"+ str(entry) + "\n"
                     break
     
     response = make_response(csv, 200)
