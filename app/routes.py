@@ -182,7 +182,7 @@ def records():
             academic_terms = AcademicTerm.query.filter(AcademicTerm.registration_id == reg.id).all()
             for term in academic_terms:
                 if term.term == ("1º semestre 2023/2024"):
-                    csv += "student,"+ str(entry) + "\n"
+                    csv += "password,"+ str(entry) + "\n"
                     break
     
     response = make_response(csv, 200)
